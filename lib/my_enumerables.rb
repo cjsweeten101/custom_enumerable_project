@@ -24,4 +24,13 @@ class Array
 
     result
   end
+
+  def my_all?
+    bool = true
+    self.my_each do |elem|
+      bool = false unless yield(elem)
+    end
+
+    bool
+  end
 end
