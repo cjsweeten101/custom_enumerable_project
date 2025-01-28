@@ -15,4 +15,13 @@ class Array
 
     self
   end
+
+  def my_select
+    result = []
+    self.my_each do |elem|
+      result << elem if yield(elem)
+    end
+
+    result
+  end
 end
