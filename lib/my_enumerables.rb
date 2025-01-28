@@ -77,3 +77,13 @@ class Array
     self
   end
 end
+
+class Hash
+  def my_each
+    for key in self.keys
+      yield(key, self[key])
+    end
+
+  self
+  end
+end
