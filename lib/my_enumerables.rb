@@ -33,4 +33,13 @@ class Array
 
     bool
   end
+
+  def my_any?
+    bool = false
+    self.my_each do |elem|
+      bool = true if yield(elem)
+    end
+
+    bool
+  end
 end
