@@ -1,5 +1,16 @@
 module Enumerable
   # Your code goes here
+  
+  def my_each_with_index
+    index = 0
+    self.my_each do |elem|
+      yield(elem, index)
+      index += 1
+    end
+
+    self
+  end
+  
   def my_select
     result = []
     self.my_each do |elem|
