@@ -42,4 +42,8 @@ class Array
 
     bool
   end
+
+  def my_none?    
+    !self.my_any? {|elem| yield(elem)}
+  end
 end
