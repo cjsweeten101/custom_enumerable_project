@@ -43,6 +43,15 @@ module Enumerable
 
     result
   end
+
+  def my_map
+    result = []
+    self.my_each do |elem|
+       result << yield(elem)
+    end
+
+    result
+  end
 end
 
 # You will first have to define my_each
