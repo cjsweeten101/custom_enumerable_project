@@ -32,7 +32,16 @@ module Enumerable
   end
 
   def my_count
-    
+    result = 0
+    if block_given?
+      self.my_each do |elem|
+        result += 1 if yield(elem)
+      end        
+    else
+      result = self.size
+    end
+
+    result
   end
 end
 
