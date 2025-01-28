@@ -78,6 +78,7 @@ class Array
   end
 end
 
+# Started to implement custom enumerables for hashes, my return to finish later
 class Hash
   def my_each
     for key in self.keys
